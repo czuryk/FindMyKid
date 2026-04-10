@@ -1,0 +1,17 @@
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.key
+*.pem
+
+keystore.properties
+key.properties
+secrets.properties
+.env
+local.properties
+# Project exclude paths
+/.gradle/
+/app/build/
+/app/build/intermediates/javac/debug/classes/
+/build/

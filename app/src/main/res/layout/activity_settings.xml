@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@mipmap/ic_launcher_round"
+                android:contentDescription="@string/app_name"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FindMyKid — Settings"
+                android:textColor="@color/text_white"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_surface_rounded"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endpoint &amp; Timing"
+                android:textColor="@color/neon_cyan"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Endpoint URL"
+                app:boxStrokeColor="@color/neon_cyan"
+                app:hintTextColor="@color/neon_cyan"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEndpoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_white"
+                    android:inputType="textUri"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Update Interval (minutes)"
+                app:boxStrokeColor="@color/neon_cyan"
+                app:hintTextColor="@color/neon_cyan"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etInterval"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_white"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_surface_rounded"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Collection"
+                android:textColor="@color/neon_cyan"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send Location Data"
+                    android:textColor="@color/text_white"
+                    android:textSize="14sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:paddingVertical="8dp"
+                    app:thumbTint="@color/neon_cyan"
+                    app:trackTint="#4000C6FF"
+                    style="@style/Widget.Material3.CompoundButton.MaterialSwitch"/>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send Active App Data"
+                    android:textColor="@color/text_white"
+                    android:textSize="14sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:paddingVertical="8dp"
+                    app:thumbTint="@color/neon_cyan"
+                    app:trackTint="#4000C6FF"
+                    style="@style/Widget.Material3.CompoundButton.MaterialSwitch"/>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchRinger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send Ringer Mode"
+                    android:textColor="@color/text_white"
+                    android:textSize="14sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:paddingVertical="8dp"
+                    app:thumbTint="@color/neon_cyan"
+                    app:trackTint="#4000C6FF"
+                    style="@style/Widget.Material3.CompoundButton.MaterialSwitch"/>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send Screen State"
+                    android:textColor="@color/text_white"
+                    android:textSize="14sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:paddingVertical="8dp"
+                    app:thumbTint="@color/neon_cyan"
+                    app:trackTint="#4000C6FF"
+                    style="@style/Widget.Material3.CompoundButton.MaterialSwitch"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_surface_rounded"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Service Control"
+                android:textColor="@color/neon_cyan"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Background Tracking"
+                    android:textColor="@color/text_white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:paddingVertical="8dp"
+                    app:thumbTint="@color/switch_service_thumb"
+                    app:trackTint="@color/switch_service_track"
+                    style="@style/Widget.Material3.CompoundButton.MaterialSwitch"/>
+                
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status: Never synced"
+                android:textColor="@color/text_gray"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_surface_rounded"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logging &amp; Diagnostics"
+                android:textColor="@color/neon_cyan"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchDebugLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Debug Log"
+                android:textColor="@color/text_white"
+                android:textSize="14sp"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:paddingVertical="8dp"
+                app:thumbTint="@color/neon_cyan"
+                app:trackTint="#4000C6FF"
+                style="@style/Widget.Material3.CompoundButton.MaterialSwitch"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSendLogs"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Send Logs"
+                android:textColor="@color/neon_cyan"
+                app:strokeColor="@color/neon_cyan"
+                app:cornerRadius="28dp"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnClearLogs"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Clear Logs"
+                android:textColor="#EF4444"
+                app:strokeColor="#EF4444"
+                app:cornerRadius="28dp"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPermissions"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Grant Permissions"
+            android:textColor="@color/neon_cyan"
+            app:strokeColor="@color/neon_cyan"
+            app:cornerRadius="28dp"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Test Configuration"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"
+            app:cornerRadius="28dp"
+            app:backgroundTint="#2E7D32"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Save Settings"
+            android:textColor="@color/text_white"
+            android:textSize="16sp"
+            app:cornerRadius="28dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:background="@drawable/btn_gradient_ripple"
+            app:backgroundTint="@null"/>
+
+    </LinearLayout>
+</ScrollView>

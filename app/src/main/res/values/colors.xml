@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backgrounds -->
+    <color name="bg_dark">#0F172A</color>
+    <color name="bg_darker">#0B1121</color>
+    
+    <!-- Primary & Accents -->
+    <color name="neon_blue">#00C6FF</color>
+    <color name="neon_cyan">#0072FF</color>
+    <color name="accent_blue">#3B82F6</color>
+    
+    <!-- Texts -->
+    <color name="text_white">#F8FAFC</color>
+    <color name="text_gray">#94A3B8</color>
+    <color name="text_gray_dark">#475569</color>
+    
+    <!-- Surface & Card -->
+    <color name="surface_dark">#1E293B</color>
+    
+    <!-- Status -->
+    <color name="status_success">#10B981</color>
+    <color name="status_error">#EF4444</color>
+</resources>
